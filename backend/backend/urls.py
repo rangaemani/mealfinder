@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from mealfinder import views
+from mealfinder.views import search_meals
 
 router = routers.DefaultRouter()
 router.register(r'meals', views.MealView, 'mealfinder')
@@ -25,4 +26,5 @@ router.register(r'meals', views.MealView, 'mealfinder')
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/meals', search_meals, name='search_meals'),
 ]

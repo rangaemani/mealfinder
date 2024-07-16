@@ -50,7 +50,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = "backend.urls"
@@ -129,3 +129,25 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000'
 ]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_METHODS = (
+    "GET",
+    "HEAD",
+    "OPTIONS",
+    "POST",
+    "PUT",
+)
+
+CORS_ALLOWED_HEADERS = (
+    "Access-Control-Allow-Headers",
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers",
+)
